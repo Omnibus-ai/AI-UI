@@ -8,11 +8,12 @@ from diffusers import (
 import gradio as gr
 import torch
 from PIL import Image
+import os
 import utils
 import datetime
 import time
 import psutil
-import os
+
 from share_btn import community_icon_html, loading_icon_html, share_js
 
 
@@ -76,7 +77,10 @@ color: #ffffff; !important;
 }
 a {text-decoration-line: underline;}
 #.text-gray-400{margin-top:0;margin-bottom:0;color:#ffffff;background-image: linear-gradient(#00000000, #f2f3f5);!important;
-.text-gray-400{margin-top:0;margin-bottom:0;color:#ffffff;!important;
+.text-gray-400{
+    margin-top:0;
+    margin-bottom:0;
+    color:#ffffff;!important;
 
 }
 
@@ -460,7 +464,7 @@ with gr.Blocks(css=css) as demo:
     generate.click(inference, inputs=inputs, outputs=outputs)
    
     share_button.click(None, [], [], _js=share_js)
-print(f"Space built in {time.time() - start_time:.2f} seconds")
+    print(f"Space built in {time.time() - start_time:.2f} seconds")
 
 demo.queue(concurrency_count=1)
 demo.launch(debug=True)
