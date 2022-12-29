@@ -429,7 +429,7 @@ with gr.Blocks(css=css) as demo:
               <a href="https://twitter.com/"><img src="https://img.shields.io/twitter/follow/hahahahohohe?label=%40anzorq&style=social" alt="Twitter Follow"></a><br>
               <a href="https://github.com/"><img alt="GitHub followers" src="https://img.shields.io/github/followers/qunash?style=social" alt="Github Follow"></a></p><br><br>
               <a href="https://www.buymeacoffee.com/Omnibus" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 162px !important;" ></a><br><br>
-              <p><img src="https://visitor-badge.glitch.me/badge?page_id=anzorq.finetuned_diffusion" alt="visitors"></p>
+              <p><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic_dev" alt="visitors"></p>
             </div>
             """)
 
