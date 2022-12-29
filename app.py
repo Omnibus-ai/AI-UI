@@ -142,7 +142,7 @@ if torch.cuda.is_available():
   pipe.enable_xformers_memory_efficient_attention()
 
 device = "GPU 🔥" if torch.cuda.is_available() else "CPU 🥶"
-device.reset()
+
 def error_str(error, title="Error"):
     return f"""#### {title}
             {error}"""  if error else ""
