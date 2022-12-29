@@ -313,6 +313,7 @@ with gr.Blocks(css=css) as demo:
             <h1 style="font-weight: 1200; text-color: #ffffff; margin-bottom: 7px; margin-top: 5px;">
                 Finetuned Magic
             </h1>
+            <br>
             </div>
             <p style="margin-bottom: 10px; font-size: 94%">
             This Space prettifies your prompt using <a href="https://huggingface.co/spaces/Gustavosta/MagicPrompt-Stable-Diffusion" target="_blank">MagicPrompt</a>
@@ -433,7 +434,7 @@ with gr.Blocks(css=css) as demo:
     gr.HTML("""
             <div style="border-top: 1px solid #303030;">
               <br>
-              <p><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic_dev" alt="visitors"></p>
+              <p><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic" alt="visitors"></p>
              
               <p>Models by <a href="https://huggingface.co/Gustavosta">@Gustavosta</a>, <a href="https://twitter.com/haruu1367">@haruu1367</a>, <a href="https://twitter.com/DGSpitzer">@Helixngc7293</a>, <a href="https://twitter.com/dal_mack">@dal_mack</a>, <a href="https://twitter.com/prompthero">@prompthero</a> and others.</p>
             </div>
