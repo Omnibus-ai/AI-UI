@@ -389,7 +389,7 @@ with gr.Blocks(css=css) as demo:
                         0, 2147483647, label="Seed (0 = random)", value=0, step=1
                     )
 
-            with gr.Tab("Image to image"):
+            with gr.Tab("Img to Img"):
                 with gr.Group():
                     image = gr.Image(
                         label="Image", height=256, tool="editor", type="pil"
@@ -440,8 +440,7 @@ with gr.Blocks(css=css) as demo:
     gr.HTML("""
             <div style="border-top: 1px solid #303030;">
               <br>
-              <p><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic" alt="visitors"></p>
-              <p><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic_dev" alt="visitors"></p>
+              
 
               <p>Models by <a href="https://huggingface.co/Gustavosta">@Gustavosta</a>, <a href="https://twitter.com/haruu1367">@haruu1367</a>, <a href="https://twitter.com/DGSpitzer">@Helixngc7293</a>, <a href="https://twitter.com/dal_mack">@dal_mack</a>, <a href="https://twitter.com/prompthero">@prompthero</a> and others.</p>
             </div>
@@ -449,6 +448,8 @@ with gr.Blocks(css=css) as demo:
     gr.HTML("""
             <div style="margin-top:150px; border-top: 1px solid #303030;">
               <br>
+              <p><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic" alt="visitors"></p>
+              <p><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic_dev" alt="visitors"></p>
               <a href="https://www.buymeacoffee.com/Omnibus" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 162px !important;" ></a><br><br>
             </div>
             """)
