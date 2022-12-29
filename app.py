@@ -19,7 +19,6 @@ from share_btn import community_icon_html, loading_icon_html, share_js
 
 start_time = time.time()
 
-https://huggingface.co/spaces/Omnibus/Finetuned-Magic/blob/main/Gustavosta-MagicPrompt-Stable-Diffusion.py
 
 text_gen = gr.Interface.load(name="spaces/Omnibus/MagicPrompt-Stable-Diffusion")
 #stable_diffusion = gr.Blocks.load(name="spaces/runwayml/stable-diffusion-v1-5")
@@ -325,7 +324,7 @@ with gr.Blocks(css=css) as demo:
             This Space prettifies your prompt using <a href="https://huggingface.co/spaces/Gustavosta/MagicPrompt-Stable-Diffusion" target="_blank">MagicPrompt</a>
             and then runs it through <a href="https://huggingface.co/spaces/anzorq/finetuned_diffusion" target="_blank">Finetuned Diffusion</a> to create aesthetically pleasing images. Simply enter a few concepts and let it improve your prompt. You can then diffuse the prompt.
             </p>
-             <p style="margin-bottom: 10px; font-size: 94%">This can take longer than 15 minutes to Render out one image using Redshift Render on CPU</p>
+             <p style="margin-bottom: 10px; font-size: 94%">Some of these Models can take longer than 15 minutes to render on CPU</p>
             <p style="margin-bottom: 10px; font-size: 94%">Don't Give Up!</p>
         </div>"""
     )
@@ -440,9 +439,9 @@ with gr.Blocks(css=css) as demo:
     gr.HTML("""
             <div style="border-top: 1px solid #303030;">
               <br>
-              <p>Finetuned Diffusion <a href="https://huggingface.co/anzorq">@anzorq</a></p>
-              <p>Magic Diffusion <a href="https://huggingface.co/Gustavosta">@Gustavosta</a></p>
-              <p>Models by <a href="https://huggingface.co/anzorq">@anzorq</a>,<a href="https://huggingface.co/Gustavosta">@Gustavosta</a>, <a href="https://twitter.com/haruu1367">@haruu1367</a>, <a href="https://twitter.com/DGSpitzer">@Helixngc7293</a>, <a href="https://twitter.com/dal_mack">@dal_mack</a>, <a href="https://twitter.com/prompthero">@prompthero</a> and others.</p>
+              <p>Finetuned Diffusion <a href="https://huggingface.co/spaces/anzorq/finetuned_diffusion">@anzorq</a></p>
+              <p>Magic Diffusion <a href="https://huggingface.co/spaces/huggingface-projects/magic-diffusion">@huggingface</a></p>
+              <p>Models by <a href="https://huggingface.co/Gustavosta">@Gustavosta</a>, <a href="https://twitter.com/haruu1367">@haruu1367</a>, <a href="https://twitter.com/DGSpitzer">@Helixngc7293</a>, <a href="https://twitter.com/dal_mack">@dal_mack</a>, <a href="https://twitter.com/prompthero">@prompthero</a> and others.</p>
             </div>
             """)
     gr.HTML("""
