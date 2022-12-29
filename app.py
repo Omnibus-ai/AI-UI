@@ -304,14 +304,14 @@ with gr.Blocks(css=css) as demo:
     )
 
     with gr.Row():
-        with gr.Column():
+        with gr.Column(scale=20):
             input_text = gr.Textbox(
                 label="Short text prompt", lines=4, elem_id="input-text"
             )
             with gr.Row():
                 see_prompts = gr.Button("Feed in your text!")
 
-        with gr.Column():
+        
             prompt = gr.Textbox(
                 label="Prettified text prompt", lines=4, elem_id="translated"
             )
@@ -323,9 +323,6 @@ with gr.Blocks(css=css) as demo:
                 )
 
 
-    with gr.Row():
-
-        with gr.Column():
             with gr.Tab("Options"):
                 with gr.Group():
                     neg_prompt = gr.Textbox(
