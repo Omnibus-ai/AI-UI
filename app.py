@@ -285,13 +285,13 @@ def replace_nsfw_images(results):
 #css = """.finetuned-diffusion-div div{display:inline-flex;align-items:center;gap:.8rem;font-size:1.75rem}.finetuned-diffusion-div div h1{font-weight:900;margin-bottom:7px}.finetuned-diffusion-div p{margin-bottom:10px;font-size:94%}a{text-decoration:underline}.tabs{margin-top:0;margin-bottom:0}#gallery{min-height:60rem}
 #css = """.finetuned-diffusion-div div{display:inline-flex;align-items:center;gap:.8rem;font-size:1.75rem}.finetuned-diffusion-div div h1{font-weight:900;margin-bottom:7px}.finetuned-diffusion-div p{margin-bottom:10px;font-size:94%}a{text-decoration:underline}.tabs{margin-top:0;margin-bottom:0}#gallery{min-height:60rem}
 
-"""
+#"""
 
 
 
 with gr.Blocks(css=css) as demo:
     gr.HTML(
-        """<div style="text-align: center; max-width: 700px; margin: 0 auto;">
+           <div style="text-align: center; max-width: 700px; margin: 0 auto;">
             <div
             style="
                 display: inline-flex;
@@ -310,7 +310,7 @@ with gr.Blocks(css=css) as demo:
             </p>
              <p style="margin-bottom: 10px; font-size: 94%">This can take longer than 15 minutes to Render out one image using Redshift Render on CPU</p>
             <p style="margin-bottom: 10px; font-size: 94%">Don't Give Up!</p>
-        </div>"""
+        </div>
     )
 
     with gr.Row():
