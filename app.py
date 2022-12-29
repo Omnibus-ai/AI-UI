@@ -75,6 +75,12 @@ color: #ffffff; !important;
     display: none !important;
 }
 a {text-decoration-line: underline;}
+.tabs{margin-top:0;margin-bottom:0;background-image: linear-gradient(#00000000, #f2f3f5);
+}
+
+
+
+
 """
 
 
@@ -304,7 +310,7 @@ with gr.Blocks(css=css) as demo:
                 font-size: 1.75rem;
             "
             >
-            <h1 style="font-weight: 900; text-color: #ffffff; margin-bottom: 7px; margin-top: 5px;">
+            <h1 style="font-weight: 1200; text-color: #ffffff; margin-bottom: 7px; margin-top: 5px;">
                 Finetuned Magic
             </h1>
             </div>
