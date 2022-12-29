@@ -50,6 +50,7 @@ text-color: #ffffff;
 h1 {
 text-color: #ffffff; !important;
 color: #ffffff; !important;
+font-weight: 1200; !important;
 }
 #gallery {
 min-height:60rem
@@ -316,7 +317,7 @@ with gr.Blocks(css=css) as demo:
             "
             >
             <h1 style="font-weight: 1200; text-color: #ffffff; margin-bottom: 15px; margin-top: 5px;">
-                Finetuned Magic
+                Magic Prompt to Finetuned Diffusion
             </h1>
             <br>
             </div>
