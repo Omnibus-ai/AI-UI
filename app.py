@@ -47,6 +47,9 @@ h1 {
 text-color: #ffffff; !important;
 color: #ffffff; !important;
 }
+#gallery {
+min-height:60rem
+}
 p {
 color: #ffffff; !important;
 }
@@ -279,7 +282,9 @@ def replace_nsfw_images(results):
         results.images[i] = Image.open("nsfw.png")
     return results.images
 
-css = """.finetuned-diffusion-div div{display:inline-flex;align-items:center;gap:.8rem;font-size:1.75rem}.finetuned-diffusion-div div h1{font-weight:900;margin-bottom:7px}.finetuned-diffusion-div p{margin-bottom:10px;font-size:94%}a{text-decoration:underline}.tabs{margin-top:0;margin-bottom:0}#gallery{min-height:60rem}
+#css = """.finetuned-diffusion-div div{display:inline-flex;align-items:center;gap:.8rem;font-size:1.75rem}.finetuned-diffusion-div div h1{font-weight:900;margin-bottom:7px}.finetuned-diffusion-div p{margin-bottom:10px;font-size:94%}a{text-decoration:underline}.tabs{margin-top:0;margin-bottom:0}#gallery{min-height:60rem}
+#css = """.finetuned-diffusion-div div{display:inline-flex;align-items:center;gap:.8rem;font-size:1.75rem}.finetuned-diffusion-div div h1{font-weight:900;margin-bottom:7px}.finetuned-diffusion-div p{margin-bottom:10px;font-size:94%}a{text-decoration:underline}.tabs{margin-top:0;margin-bottom:0}#gallery{min-height:60rem}
+
 """
 
 
@@ -296,13 +301,15 @@ with gr.Blocks(css=css) as demo:
             "
             >
             <h1 style="font-weight: 900; text-color: #ffffff; margin-bottom: 7px; margin-top: 5px;">
-                Magic Prompt to Finetuned Diffusion 👍
+                Finetuned Magic
             </h1>
             </div>
             <p style="margin-bottom: 10px; font-size: 94%">
             This Space prettifies your prompt using <a href="https://huggingface.co/spaces/Gustavosta/MagicPrompt-Stable-Diffusion" target="_blank">MagicPrompt</a>
             and then runs it through <a href="https://huggingface.co/spaces/anzorq/finetuned_diffusion" target="_blank">Finetuned Diffusion</a> to create aesthetically pleasing images. Simply enter a few concepts and let it improve your prompt. You can then diffuse the prompt.
             </p>
+             <p style="margin-bottom: 10px; font-size: 94%">This can take longer than 15 minutes to Render out one image using Redshift Render on CPU</p>
+            <p style="margin-bottom: 10px; font-size: 94%">Don't Give Up!</p>
         </div>"""
     )
 
