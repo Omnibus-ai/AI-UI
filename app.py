@@ -19,7 +19,7 @@ from share_btn import community_icon_html, loading_icon_html, share_js
 
 start_time = time.time()
 
-
+https://huggingface.co/spaces/Omnibus/Finetuned-Magic/blob/main/Gustavosta-MagicPrompt-Stable-Diffusion.py
 
 text_gen = gr.Interface.load(name="spaces/Omnibus/MagicPrompt-Stable-Diffusion")
 #stable_diffusion = gr.Blocks.load(name="spaces/runwayml/stable-diffusion-v1-5")
@@ -440,16 +440,16 @@ with gr.Blocks(css=css) as demo:
     gr.HTML("""
             <div style="border-top: 1px solid #303030;">
               <br>
-              
-
-              <p>Models by <a href="https://huggingface.co/Gustavosta">@Gustavosta</a>, <a href="https://twitter.com/haruu1367">@haruu1367</a>, <a href="https://twitter.com/DGSpitzer">@Helixngc7293</a>, <a href="https://twitter.com/dal_mack">@dal_mack</a>, <a href="https://twitter.com/prompthero">@prompthero</a> and others.</p>
+              <p>Finetuned Diffusion <a href="https://huggingface.co/anzorq">@anzorq</a></p>
+              <p>Magic Diffusion <a href="https://huggingface.co/Gustavosta">@Gustavosta</a></p>
+              <p>Models by <a href="https://huggingface.co/anzorq">@anzorq</a>,<a href="https://huggingface.co/Gustavosta">@Gustavosta</a>, <a href="https://twitter.com/haruu1367">@haruu1367</a>, <a href="https://twitter.com/DGSpitzer">@Helixngc7293</a>, <a href="https://twitter.com/dal_mack">@dal_mack</a>, <a href="https://twitter.com/prompthero">@prompthero</a> and others.</p>
             </div>
             """)
     gr.HTML("""
-            <div style="margin-top:150px; border-top: 1px solid #303030;">
+            <div style="top-margin:50px; border-top: 1px solid #303030;">
               <br>
-              <p><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic" alt="visitors"></p>
-              <p><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic_dev" alt="visitors"></p>
+              <p top-margin:20px;><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic" alt="visitors"></p>
+              <p bottom-margin:50px;><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic_dev" alt="visitors"></p>
               <a href="https://www.buymeacoffee.com/Omnibus" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 162px !important;" ></a><br><br>
             </div>
             """)
@@ -468,5 +468,5 @@ with gr.Blocks(css=css) as demo:
     share_button.click(None, [], [], _js=share_js)
     print(f"Space built in {time.time() - start_time:.2f} seconds")
 
-demo.queue(concurrency_count=-1)
+demo.queue(concurrency_count=1)
 demo.launch(debug=True)
