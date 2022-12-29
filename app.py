@@ -279,6 +279,9 @@ def replace_nsfw_images(results):
         results.images[i] = Image.open("nsfw.png")
     return results.images
 
+css = """.finetuned-diffusion-div div{display:inline-flex;align-items:center;gap:.8rem;font-size:1.75rem}.finetuned-diffusion-div div h1{font-weight:900;margin-bottom:7px}.finetuned-diffusion-div p{margin-bottom:10px;font-size:94%}a{text-decoration:underline}.tabs{margin-top:0;margin-bottom:0}#gallery{min-height:60rem}
+"""
+
 
 
 with gr.Blocks(css=css) as demo:
@@ -386,16 +389,14 @@ with gr.Blocks(css=css) as demo:
                         step=0.01,
                         value=0.5,
                     )
-        with gr.Column(scale=55):
+        with gr.Column(scale=80):
           with gr.Group():
               model_name = gr.Dropdown(label="Model", choices=[m.name for m in models], value=current_model.name)
               with gr.Box(visible=False) as custom_model_group:
                 custom_model_path = gr.Textbox(label="Custom model path", placeholder="Path to model, e.g. nitrosocke/Arcane-Diffusion", interactive=True)
                 gr.HTML("<div><font size='2'>Custom models have to be downloaded first, so give it some time.</font></div>")
               
-              with gr.Row():
-                prompt = gr.Textbox(label="Prompt", show_label=False, max_lines=2,placeholder="Enter prompt. Style applied automatically").style(container=False)
-                generate = gr.Button(value="Generate").style(rounded=(False, True, True, False))
+              
 
 
               # image_out = gr.Image(height=512)
