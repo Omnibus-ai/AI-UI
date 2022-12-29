@@ -16,8 +16,12 @@ import os
 from share_btn import community_icon_html, loading_icon_html, share_js
 
 
+start_time = time.time()
+
+
+
 text_gen = gr.Interface.load(name="spaces/Omnibus/MagicPrompt-Stable-Diffusion")
-stable_diffusion = gr.Blocks.load(name="spaces/runwayml/stable-diffusion-v1-5")
+#stable_diffusion = gr.Blocks.load(name="spaces/runwayml/stable-diffusion-v1-5")
 
 
 
