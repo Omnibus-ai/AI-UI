@@ -468,5 +468,5 @@ with gr.Blocks(css=css) as demo:
     share_button.click(None, [], [], _js=share_js)
     print(f"Space built in {time.time() - start_time:.2f} seconds")
 
-demo.queue(concurrency_count=1)
+demo.queue(concurrency_count=0)
 demo.launch(debug=True)
