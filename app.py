@@ -448,5 +448,5 @@ with gr.Blocks(css=css) as demo:
    
     share_button.click(None, [], [], _js=share_js)
     
-
+demo.queue(concurrency_count=1)
 demo.launch(debug=True)
