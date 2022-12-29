@@ -298,7 +298,7 @@ with gr.Blocks(css=css) as demo:
             </div>
             <p style="margin-bottom: 10px; font-size: 94%">
             This Space prettifies your prompt using <a href="https://huggingface.co/spaces/Gustavosta/MagicPrompt-Stable-Diffusion" target="_blank">MagicPrompt</a>
-            and then runs it through Finetuned Diffusion to create aesthetically pleasing images. Simply enter a few concepts and let it improve your prompt. You can then diffuse the prompt.
+            and then runs it through <a href="https://huggingface.co/spaces/anzorq/finetuned_diffusion" target="_blank">Finetuned Diffusion</a> to create aesthetically pleasing images. Simply enter a few concepts and let it improve your prompt. You can then diffuse the prompt.
             </p>
         </div>"""
     )
