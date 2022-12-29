@@ -75,7 +75,7 @@ color: #ffffff; !important;
     display: none !important;
 }
 a {text-decoration-line: underline;}
-.text-gray-400{margin-top:0;margin-bottom:0;background-image: linear-gradient(#00000000, #f2f3f5);!important;
+.text-gray-400{margin-top:0;margin-bottom:0;color:#ffffff;background-image: linear-gradient(#00000000, #f2f3f5);!important;
 }
 
 
@@ -427,7 +427,7 @@ with gr.Blocks(css=css) as demo:
 
         with gr.Group(elem_id="share-btn-container"):
             community_icon = gr.HTML(community_icon_html, visible=False)
-            loading_icon = gr.HTML(loading_icon_html, visible=False)
+            loading_icon = gr.HTML(loading_icon_html, visible=True)
             share_button = gr.Button(
                 "Share to community", elem_id="share-btn", visible=False
             )
