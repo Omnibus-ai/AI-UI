@@ -291,7 +291,7 @@ def replace_nsfw_images(results):
 
 with gr.Blocks(css=css) as demo:
     gr.HTML(
-           <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+        """<div style="text-align: center; max-width: 700px; margin: 0 auto;">
             <div
             style="
                 display: inline-flex;
@@ -310,7 +310,7 @@ with gr.Blocks(css=css) as demo:
             </p>
              <p style="margin-bottom: 10px; font-size: 94%">This can take longer than 15 minutes to Render out one image using Redshift Render on CPU</p>
             <p style="margin-bottom: 10px; font-size: 94%">Don't Give Up!</p>
-        </div>
+        </div>"""
     )
 
     with gr.Row():
@@ -420,7 +420,22 @@ with gr.Blocks(css=css) as demo:
             share_button = gr.Button(
                 "Share to community", elem_id="share-btn", visible=False
             )
+    gr.HTML("""
+            <div style="border-top: 1px solid #303030;">
+              <br>
+              <p>Models by <a href="https://huggingface.co/nitrosocke">@nitrosocke</a>, <a href="https://twitter.com/haruu1367">@haruu1367</a>, <a href="https://twitter.com/DGSpitzer">@Helixngc7293</a>, <a href="https://twitter.com/dal_mack">@dal_mack</a>, <a href="https://twitter.com/prompthero">@prompthero</a> and others. ❤️</p>
+              <p>This space uses the <a href="https://github.com/LuChengTHU/dpm-solver">DPM-Solver++</a> sampler by <a href="https://arxiv.org/abs/2206.00927">Cheng Lu, et al.</a>.</p>
+              <p>Space by: Omnibus<br>
+              <a href="https://twitter.com/"><img src="https://img.shields.io/twitter/follow/hahahahohohe?label=%40anzorq&style=social" alt="Twitter Follow"></a><br>
+              <a href="https://github.com/"><img alt="GitHub followers" src="https://img.shields.io/github/followers/qunash?style=social" alt="Github Follow"></a></p><br><br>
+              <a href="https://www.buymeacoffee.com/Omnibus" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 162px !important;" ></a><br><br>
+              <p><img src="https://visitor-badge.glitch.me/badge?page_id=anzorq.finetuned_diffusion" alt="visitors"></p>
+            </div>
+            """)
 
+
+
+    
     see_prompts.click(get_prompts, inputs=[input_text], outputs=[prompt])
     
     inputs = [model_name, prompt, guidance, steps, n_images, width, height, seed, image, strength, neg_prompt]
@@ -429,12 +444,7 @@ with gr.Blocks(css=css) as demo:
     prompt.submit(inference, inputs=inputs, outputs=outputs)
     generate.click(inference, inputs=inputs, outputs=outputs)
    
-    
-    
-    
-    
-  
     share_button.click(None, [], [], _js=share_js)
-
+    
 
 demo.launch(debug=True)
