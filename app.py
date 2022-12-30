@@ -450,7 +450,7 @@ with gr.Blocks(css=css) as demo:
               <br>
               <p top-margin:20px;><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic" alt="visitors"></p>
               <p bottom-margin:50px;><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic_dev" alt="visitors"></p>
-              <a href="https://www.buymeacoffee.com/Omnibus" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 162px !important;" ></a><br><br>
+              <a href="https://www.buymeacoffee.com/Omnibus" target="_blank"><img src="https://huggingface.co/spaces/Omnibus/Finetuned-Magic_dev/blob/main/default-yellow.png" alt="Buy Me A GPU" style="height: 45px !important;width: 162px !important;" ></a><br><br>
             </div>
             """)
 
@@ -469,4 +469,4 @@ with gr.Blocks(css=css) as demo:
     print(f"Space built in {time.time() - start_time:.2f} seconds")
 
 demo.queue(concurrency_count=1)
-demo.launch(enable_queue=False) 
+demo.launch(enable_queue=True) 
