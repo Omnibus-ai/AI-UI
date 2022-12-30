@@ -450,8 +450,11 @@ with gr.Blocks(css=css) as demo:
     gr.HTML("""
             <div style="border-top: 1px solid #303030;">
               <br>
-              <p>Finetuned Diffusion <a href="https://huggingface.co/spaces/anzorq/finetuned_diffusion">@anzorq</a></p>
-              <p>Magic Diffusion <a href="https://huggingface.co/spaces/huggingface-projects/magic-diffusion">@huggingface</a></p>
+              <p>Finetuned Diffusion <a href="https://huggingface.co/spaces/anzorq/finetuned_diffusion">Finetuned Diffusion</a></p>
+              <p>Magic Prompt Stable Diffusion <a href="https://huggingface.co/spaces/Gustavosta/MagicPrompt-Stable-Diffusion">Magic Prompt Stable Diffusion</a></p>
+
+              <p>Magic Diffusion <a href="https://huggingface.co/spaces/huggingface-projects/magic-diffusion">Magic Diffusion</a></p>
+              
               <p>Models by <a href="https://huggingface.co/Gustavosta">@Gustavosta</a>, <a href="https://twitter.com/haruu1367">@haruu1367</a>, <a href="https://twitter.com/DGSpitzer">@Helixngc7293</a>, <a href="https://twitter.com/dal_mack">@dal_mack</a>, <a href="https://twitter.com/prompthero">@prompthero</a> and others.</p>
             </div>
             """)
