@@ -25,69 +25,12 @@ text_gen = gr.Interface.load(name="spaces/Omnibus/MagicPrompt-Stable-Diffusion")
 
 
 
-
-
-def get_prompts(prompt_text):
-    return text_gen(prompt_text)
-
-
-css = """
-.animate-spin {
-    animation: spin 1s linear infinite;
-}
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-body {
-background-color: #3e567d;
-text-color: #ffffff;
-}
-h1 {
-text-color: #ffffff; !important;
-color: #ffffff; !important;
-font-weight: 1200; !important;
-}
-#gallery {
-min-height:60rem
-}
-p {
-color: #ffffff; !important;
-}
-
-#share-btn-container {
-    display: flex; padding-left: 0.5rem !important; padding-right: 0.5rem !important; background-color: #000000; justify-content: center; align-items: center; border-radius: 9999px !important; width: 13rem;
-}
-#share-btn {
-    all: initial; color: #ffffff;font-weight: 600; cursor:pointer; font-family: 'IBM Plex Sans', sans-serif; margin-left: 0.5rem !important; padding-top: 0.25rem !important; padding-bottom: 0.25rem !important;
-}
-#share-btn * {
-    all: unset;
-}
-#share-btn-container div:nth-child(-n+2){
-    width: auto !important;
-    min-height: 0px !important;
-}
-#share-btn-container .wrap {
-    display: none !important;
-}
-a {text-decoration-line: underline;}
-#.text-gray-400{margin-top:0;margin-bottom:0;color:#ffffff;background-image: linear-gradient(#00000000, #f2f3f5);!important;
-.text-gray-400{
-    margin-top:0;
-    margin-bottom:0;
-    color:#ffffff;!important;
-
-}
+##############################################   Models   ##############################################
 
 
 
 
-"""
+
 
 
 class Model:
@@ -161,6 +104,13 @@ if torch.cuda.is_available():
   pipe.enable_xformers_memory_efficient_attention()
 
 device = "GPU 🔥" if torch.cuda.is_available() else "CPU 🥶"
+
+
+####################################   Definitions   ############################################
+
+
+def get_prompts(prompt_text):
+    return text_gen(prompt_text)
 
 def error_str(error, title="Error"):
     return f"""#### {title}
@@ -298,12 +248,72 @@ def replace_nsfw_images(results):
         results.images[i] = Image.open("nsfw.png")
     return results.images
 
+
+############################# style ##########################################
+
+css = """
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+body {
+background-color: #3e567d;
+text-color: #ffffff;
+}
+h1 {
+text-color: #ffffff; !important;
+color: #ffffff; !important;
+font-weight: 1200; !important;
+}
+#gallery {
+min-height:60rem
+}
+p {
+color: #ffffff; !important;
+}
+
+#share-btn-container {
+    display: flex; padding-left: 0.5rem !important; padding-right: 0.5rem !important; background-color: #000000; justify-content: center; align-items: center; border-radius: 9999px !important; width: 13rem;
+}
+#share-btn {
+    all: initial; color: #ffffff;font-weight: 600; cursor:pointer; font-family: 'IBM Plex Sans', sans-serif; margin-left: 0.5rem !important; padding-top: 0.25rem !important; padding-bottom: 0.25rem !important;
+}
+#share-btn * {
+    all: unset;
+}
+#share-btn-container div:nth-child(-n+2){
+    width: auto !important;
+    min-height: 0px !important;
+}
+#share-btn-container .wrap {
+    display: none !important;
+}
+a {text-decoration-line: underline;}
+#.text-gray-400{margin-top:0;margin-bottom:0;color:#ffffff;background-image: linear-gradient(#00000000, #f2f3f5);!important;
+.text-gray-400{
+    margin-top:0;
+    margin-bottom:0;
+    color:#ffffff;!important;
+
+}
+
+
+
+
+"""
 #css = """.finetuned-diffusion-div div{display:inline-flex;align-items:center;gap:.8rem;font-size:1.75rem}.finetuned-diffusion-div div h1{font-weight:900;margin-bottom:7px}.finetuned-diffusion-div p{margin-bottom:10px;font-size:94%}a{text-decoration:underline}.tabs{margin-top:0;margin-bottom:0}#gallery{min-height:60rem}
 #css = """.finetuned-diffusion-div div{display:inline-flex;align-items:center;gap:.8rem;font-size:1.75rem}.finetuned-diffusion-div div h1{font-weight:900;margin-bottom:7px}.finetuned-diffusion-div p{margin-bottom:10px;font-size:94%}a{text-decoration:underline}.tabs{margin-top:0;margin-bottom:0}#gallery{min-height:60rem}
 
 #"""
 
-
+##########################################   Gradio   ###############################################################
 
 with gr.Blocks(css=css) as demo:
     gr.HTML(
@@ -455,7 +465,7 @@ with gr.Blocks(css=css) as demo:
             """)
 
 
-
+#########################################   Gradio End   ###################################################
     
     see_prompts.click(get_prompts, inputs=[input_text], outputs=[prompt])
     
