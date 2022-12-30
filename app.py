@@ -450,7 +450,7 @@ with gr.Blocks(css=css) as demo:
               <br>
               <p top-margin:20px;><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic" alt="visitors"></p>
               <p bottom-margin:50px;><img src="https://visitor-badge.glitch.me/badge?page_id=omnibus.finetuned-magic_dev" alt="visitors"></p>
-              <a href="https://www.buymeacoffee.com/Omnibus" target="_blank"><img src="https://huggingface.co/spaces/Omnibus/Finetuned-Magic_dev/blob/main/default-yellow.png" alt="Buy Me A GPU" style="height: 100px !important;width: 200px !important;" ></a><br><br>
+              <a href="https://www.buymeacoffee.com/Omnibus" target="_blank"><img src="https://huggingface.co/spaces/Omnibus/assets/blob/main/default-yellow-omnibus.webp" alt="Buy Me A GPU" style="height: 100px !important;width: 200px !important;" ></a><br><br>
             </div>
             """)
 
